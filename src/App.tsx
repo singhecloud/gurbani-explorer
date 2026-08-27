@@ -565,17 +565,18 @@ function App() {
             </TabPanel>
           }
           {!appContext.state.show_panel && mouseVisible &&
-            <div className="absolute right-6 bottom-6 flex">
-              <div className="flex p-4 border-2 border-gray-300 rounded-full bg-white hover:bg-gray-800 mr-4 text-gray-800 hover:text-white">
+            <div className="absolute right-6 bottom-6 flex z-[200]">
+              <div
+                onClick={showSearch}
+                className="cursor-pointer flex p-4 border-2 border-gray-300 rounded-full bg-white hover:bg-gray-800 mr-4 text-gray-800 hover:text-white">
                 <FaSearch
-                  className="cursor-pointer text-2xl"
-                  onClick={showSearch}
+                  className="text-2xl"
                 />
               </div>
-              <div className="flex p-3 border-2 border-gray-300 rounded-2xl bg-white h-11 mt-2 text-gray-800 hover:bg-gray-800 hover:text-white">
+              <div
+                onClick={togglePanel}
+                className="cursor-pointer flex p-3 border-2 border-gray-300 rounded-2xl bg-white h-11 mt-2 text-gray-800 hover:bg-gray-800 hover:text-white">
                 <FaWindowMaximize
-                  className="cursor-pointer"
-                  onClick={togglePanel}
                 />
               </div>
               { 

@@ -30,6 +30,11 @@ const Slide = styled.div`
     height: 100vh;
     overflow: hidden;
     background: #fbf3e6;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 `;
 
 const Frame = styled.div`
